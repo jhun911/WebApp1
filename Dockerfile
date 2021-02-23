@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-WORKDIR /app
+WORKDIR /WebApp1
 
 # Copy csproj and restore as distinct layers
-RUN CD WebApp1
+COPY *.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
